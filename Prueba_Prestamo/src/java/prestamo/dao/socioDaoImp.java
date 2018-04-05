@@ -16,7 +16,8 @@ public class socioDaoImp implements socioDao{
         Session sesion = HibernateUtil.getSessionFactory().openSession();
         Transaction t = sesion.beginTransaction();
         
-        String consulta = "From Usuario";
+        String consulta = "from Socios";
+        
         
         try {
             

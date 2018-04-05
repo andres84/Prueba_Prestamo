@@ -7,36 +7,36 @@
         <title>Prestamos | Empresa</title>
     </h:head>
     <h:body>
-        
+
         <h:form>
-            
+
             <p:dataTable id="TablaMostrarSocios" var="soc" value="#{socioBean.listar}" emptyMessage="No existen socios">
-                
-                
+
+
                 <p:column headerText="Nombre Socio">
-                    
+
                     <h:outputText value="#{soc.nombreSocio}"/>
-                    
+
                 </p:column>
-                
+
                 <p:column headerText="Tasa Interes Socio">
-                    
+
                     <h:outputText value="#{soc.tasaInteres}"/>
-                    
+
                 </p:column>
-                
+
                 <p:column headerText="Monto Total Socio">
-                    
+
                     <h:outputText value="#{soc.montoSocio}"/>
-                    
+
                 </p:column>
-                
-                
+
+
             </p:dataTable>
-            
-            
+
+
         </h:form>
-        
+
     </h:body>
 </html>
 
