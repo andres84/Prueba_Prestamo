@@ -1,38 +1,28 @@
 package prestamo.dao;
 
-import java.util.List;
-import org.hibernate.Session;
-import org.hibernate.Transaction;
+
 import prestamo.modelo.Socios;
-import prestamo.util.HibernateUtil;
+
 
 public class socioDaoImp implements socioDao{
 
+    private Socios socios;
+    
     @Override
-    public List<Socios> listarSocios() {
-    
-    List<Socios> listarSocios = null;
-    
-        Session sesion = HibernateUtil.getSessionFactory().openSession();
-        Transaction t = sesion.beginTransaction();
+    public Socios metodoA() {
+       
+        /*
         
-        String consulta = "from Socios";
+        algoritmos que manejan las sesiones a la BD y genera los querys necesarios 
+        para la solucion :(
+        
+        */
         
         
-        try {
-            
-            listarSocios = sesion.createQuery(consulta).list();
-            t.commit();
-            sesion.close();
-            
-            
-        } catch (Exception e) {
-            
-            System.out.println(e.getMessage());
-            t.rollback();
-        }
+    return socios;
     
-        return listarSocios;
     }
+
+   
     
 }

@@ -4,35 +4,24 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:p="http://primefaces.org/ui">
     <h:head>
-        <title>Prestamos | Empresa</title>
+        <title>Financiamiento S.A.S. | Home</title>
     </h:head>
     <h:body>
 
         <h:form>
 
-            <p:dataTable id="TablaMostrarSocios" var="soc" value="#{socioBean.listar}" emptyMessage="No existen socios">
+            <p:fieldset legend="Financiamiento S.A.S.">
 
+                <h:panelGrid columns="1">
 
-                <p:column headerText="Nombre Socio">
+                    <p:outputLabel value="Digita el monto a financiar"/>
+                    <p:inputText value=""/>
 
-                    <h:outputText value="#{soc.nombreSocio}"/>
+                </h:panelGrid>
 
-                </p:column>
+                <p:commandButton icon="ui-icon-chek" value="Procesar"/>
 
-                <p:column headerText="Tasa Interes Socio">
-
-                    <h:outputText value="#{soc.tasaInteres}"/>
-
-                </p:column>
-
-                <p:column headerText="Monto Total Socio">
-
-                    <h:outputText value="#{soc.montoSocio}"/>
-
-                </p:column>
-
-
-            </p:dataTable>
+            </p:fieldset>
 
 
         </h:form>
